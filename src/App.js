@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import './App.css';
+// Global syle sheet can go here.
 import Navbar from './components/layout/Navbar';
-import Users from './components/users/Users';
+import Layout from './components/layout/Layout';
 
 // Class based
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar title="Github Finder" />
-        <Users />
+        <Layout />
         {/* Able to add a variable in curly braces for JSX */}
         {/* <h2>{name}</h2> */}
         {/* Change to upper case letters */}
