@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FaBlackTie } from 'react-icons/fa';
 
-export class Heading extends Component {
+class Heading extends Component {
     render() {
         return (
             <div>

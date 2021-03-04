@@ -1,21 +1,23 @@
-import React, { Component } from 'react'
-import { FaGithubSquare } from 'react-icons/fa';
+import React from 'react'
+// import { FaGithubSquare } from 'react-icons/fa';
 import PropTypes from 'prop-types'
+import { FaGithubSquare } from 'react-icons/fa'
 
-export class Navbar extends Component {
-    static defaultProps = {
-        title: 'Navbar'
-    }
-    static propTypes = {
-        title: PropTypes.string.isRequired,
-    }
-    render() {
+const Navbar = ({icon, title}) => {
         return (
             <nav className='bg-primary navbar'>
-                <h1><FaGithubSquare />{this.props.title}</h1>
+                <h1>{icon}{title}</h1>
             </nav>
         )
     }
-}
+
+    Navbar.defaultProps = {
+        title: 'Navbar',
+        icon: <FaGithubSquare />
+    }
+    Navbar.propTypes = {
+        title: PropTypes.string.isRequired,
+        icon: PropTypes.object.isRequired,
+    }
 
 export default Navbar

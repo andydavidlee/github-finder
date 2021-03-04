@@ -1,49 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import UserItem from './UserItem'
+import Spinner from '../layout/Spinner'
 
-export class Users extends Component {
-
-    state = {
-        users:[
-            {
-                login: "mojombo",
-                id: 1,
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            },
-            {
-                login: "Gary",
-                id: 2,
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            },
-            {
-                login: "Abbey",
-                id: 3,
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            },
-            {
-                login: "Stuff",
-                id: 4,
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            },
-        ]
-    }
-    render() {
-        const { users } = this.state;
-        return (
-            <div>
+const Users =({users, loading}) => {
+    if(loading) {
+        return <Spinner />
+    } else {
+         // const { users } = this.props;
+         return (
+            <div style={userStyle}>
                 {users.map(user => (
                     <>
-                    <div>{user.login}</div>
-                    <div>{user.id}</div>
-                    <img src={user.avatar_url} alt="avatar" style={{width: '100px'}}/>
+                    <UserItem key={user.id} user={user}/>
+                    {/* <div>{user.id}</div> */}
+                    {/* <img src={user.avatar_url} alt="avatar" style={{width: '100px'}}/> */}
                     </>
                 ))}
             </div>
         )
     }
 }
-
+const userStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: '1rem'
+}
 export default Users
