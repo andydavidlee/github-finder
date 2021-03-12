@@ -1,23 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
-export class UserItem extends Component {
-    state =   {
-        login: "mojombo",
-        id: 1,
-        avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-        html_url: "https://github.com/mojombo",
-      }
+const UserItem = ({ user: { login, avatar_url, html_url } }) => {
+    return (
+        <div className='card text-center'>
+            <img src={avatar_url} alt="avatar" className='round-img' style={{ width: '60px' }} />
+            <h3 style={{ color: 'red' }}>{login}</h3>
+            <Link to={`/user/${login}`} className="btn btn-dark btn-sm my-1">More</Link>
+        </div>
+    )
 
-    render() {
-        const { login, avatar_url, html_url } = this.state;
-        return (
-            <div className="card text-center">
-                {login}
-                <img src={avatar_url} alt="avatar" className="round-img" style={{width: '60px'}}/>
-                <a href={html_url} className="btn btn-dark btn-sm my-1">More</a>
-            </div>
-        )
-    }
 }
 
+UserItem.propTypes = {
+    user: PropTypes.object.isRequired,
+}
 export default UserItem

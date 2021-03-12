@@ -1,0 +1,96 @@
+/* our reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #f4f4f4;
+  padding: 0 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+h1 {
+ color: orangered;
+}
+
+h2 {
+ color: #fff;
+}
+
+.header{
+ display: flex;
+}
+
+.left {
+ flex: 40%;
+ margin-left: 4rem;
+}
+
+img {
+ margin: 0 auto;
+ width: 85%;
+}
+
+.right {
+ flex: 60%;
+ margin: auto;
+ align-content: center;
+ align-items: center;
+}
+
+.right p{
+ margin-bottom: 1.5rem;
+}
+.right button{
+ padding: 1rem;
+ background: orangered;
+ color: #fff;
+}
+
+.displayBoxes{
+ display: flex;
+ margin: 1.1rem 2rem;
+ text-align: center;
+ color: #fff;
+}
+
+.analysisBox{
+ padding: 1rem;
+ background: orangered;
+}
+
+.analysisBox button {
+ margin-top: 2rem;
+ padding: 1rem;
+ background: #fff;
+ color: orangered;
+}
+.planningBox{
+ padding: 1rem;
+ background: orange;
+}
+
+.planningBox button{
+ margin-top: 2rem;
+ padding: 1rem;
+ background: #fff;
+ color: orange;
+}
+
+.designBox{
+ padding: 1rem;
+ background: green;
+}
+
+.designBox button{
+ margin-top: 2rem;
+ padding: 1rem;
+ background: #fff;
+ color: green;
+}

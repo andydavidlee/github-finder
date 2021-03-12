@@ -1,0 +1,33 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// To overide bootstrap variables, we need to place them above the import of bootstrap
+
+// We are overriding bootstrap values with our own values.
+
+// $primary: yellow;
+
+$primary: #dc3545;
+$dark: #333333;
+$light: #f4f4f4;
+$danger: #dc3545;
+$success: #28a745;
+
+$spacer: 2rem;
+
+.round-img {
+    border-radius: 50%;
+  }
+  
+@import "components/_config";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Add custom code after thisd
+
+@import "base";
+@import "components/form";
+@import "components/grid";
+@import "components/text";
+@import "components/navbar";
+@import "components/mobile";
