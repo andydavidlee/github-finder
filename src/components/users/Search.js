@@ -30,7 +30,7 @@ class Search extends Component {
             <div>
                 <form onSubmit={this.handleSubmit} className="form">
                     <input type="text" name="text" value={this.state.text} placeholder="Search Users..." onChange={this.handleChange} />
-                    <input type="submit" value="Search" className="btn btn-dark btn-block" />
+                    <input type="submit" value="Search" className="btn btn-dark w-100" />
                 </form>
                 {showClear && (
                     <button className="btn btn-light" onClick={clearUsers}>Clear</button>
